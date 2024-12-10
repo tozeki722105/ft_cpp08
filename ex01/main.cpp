@@ -31,4 +31,17 @@ int main()
 			std::cerr << e.what() << '\n';
 		}
 	}
+	std::cout << std::endl;
+
+	// size == 1 テスト
+	{
+		try {
+			Span span(100);
+			span.addNumber(1);
+			unsigned int val = span.shortestSpan();
+			std::cout << val << std::endl;
+		} catch (const std::exception& e) {
+			std::cerr << e.what() << '\n';
+		}
+	}
 }
