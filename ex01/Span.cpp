@@ -39,14 +39,16 @@ unsigned int Span::shortestSpan()
 	std::vector<int> sortedData = _vec;
 	std::sort(sortedData.begin(), sortedData.end());
 
-	if (std::adjacent_find(sortedData.begin(), sortedData.end()) != sortedData.end())
-		return 0;
+	// if (std::adjacent_find(sortedData.begin(), sortedData.end()) != sortedData.end())
+	// 	return 0;
 
 	unsigned int res = UINT_MAX;
 	unsigned int newSpan;
 	std::vector<int>::iterator i = sortedData.begin();
 	for (std::vector<int>::iterator next = i + 1; next != sortedData.end(); next++) {
 		newSpan = static_cast<unsigned int>(*next - *i);
+		if (newSpan == SPAN_MIN)
+			return newSpan;
 		if (newSpan < res)
 			res = newSpan;
 		i = next;

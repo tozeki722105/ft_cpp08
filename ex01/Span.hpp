@@ -18,6 +18,7 @@ private:
 	Span();
 	std::vector<int> _vec;
 	unsigned int _maxSize;
+	static const unsigned int SPAN_MIN = 0;
 };
 
 #endif
