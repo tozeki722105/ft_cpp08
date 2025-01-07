@@ -2,7 +2,7 @@ CXX		:=	c++
 CXXFLAGS	:=	-Wall -Wextra -Werror -Wconversion -std=c++98
 RM		:=	rm -f
 
-TARGET	:=	a.out
+TARGET	:=	ex01
 SRCS    :=	Span.cpp \
 			main.cpp 
 OBJS    :=	$(patsubst %.cpp, %.o, $(SRCS))
