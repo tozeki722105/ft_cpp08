@@ -5,7 +5,7 @@
 
 void checkLeaks()
 {
-	system("leaks -q a.out");
+	system("leaks -q ex02");
 }
 
 int main()
@@ -60,5 +60,5 @@ int main()
 			++begin;
 		}
 	}
-	std::cout << std::endl;
+	std::cout << "\nend\n" << std::endl;
 }
